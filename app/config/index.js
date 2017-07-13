@@ -7,7 +7,7 @@ if (process.env.NODE_ENV === 'production') {
   let redisPassword = redisURI.auth.split(':')[1];
 
   module.exports = {
-    host: process.env.host || "",
+    host: process.env.host || "http://chatcatapp-karen.heroku.com",
     dvURI: process.env.dbURI,
     sessionSecret: process.env.sessionSecret,
     fb: {
@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === 'production') {
     twitter: {
       consumerKey: process.env.twConsumerKey,
       consumerSecret: process.env.twConsumerSecret,
-      callbackURL: process.env.host + "/auth/twitter/callback",
+      callbackURL: "/auth/twitter/callback",
       profileFields: ['id', 'displayName', 'photos']
     },
     redis: {
