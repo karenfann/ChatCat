@@ -25,6 +25,7 @@ module.exports = () => {
     h.findOne(profile.id)
       .then(result => {
         if(result) {
+          console.log('reached here before done')
           done(null, result);
         } else {
           // Create a new user and return
